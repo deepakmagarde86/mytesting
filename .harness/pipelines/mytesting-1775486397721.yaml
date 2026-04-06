@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_deepakmagarde86_mytesting_1775486418633
+  name: Build mytesting
+  orgIdentifier: default
+  projectIdentifier: Testing
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1775486386515
+        repoName: deepakmagarde86/mytesting
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
