@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_deepakmagarde86_mytesting_1775486418633-pr-trigger-input-set
+  identifier: Build_deepakmagarde86_mytesting_1775486418633prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Testing
+  pipeline:
+    identifier: Build_deepakmagarde86_mytesting_1775486418633
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
